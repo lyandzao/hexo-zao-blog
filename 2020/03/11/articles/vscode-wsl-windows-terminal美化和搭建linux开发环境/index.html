@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>vscode+wsl+windows terminal美化和搭建linux开发环境 - zaoのblog</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://www.hansomezao.com/2020/03/11/articles/vscode-wsl-windows-terminal%E7%BE%8E%E5%8C%96%E5%92%8C%E6%90%AD%E5%BB%BAlinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<meta name="description" content="链接➡ vscode + wsl + windows terminal 美化和搭建linux开发环境 没钱买mac,windwos下命令行挺难用的,之前一直用cmder还不错,但后期卡卡的,改用了windows terminal,真香啊,速度和外观都不错,刚好最近在学linux,一直用的阿里云做测试,想着统一一下包管理和命令行,发现了wsl这个东西,就打算改造一下windows,个人电脑系统为wi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="vscode+wsl+windows terminal美化和搭建linux开发环境">
+<meta property="og:url" content="https://www.hansomezao.com/2020/03/11/articles/vscode-wsl-windows-terminal%E7%BE%8E%E5%8C%96%E5%92%8C%E6%90%AD%E5%BB%BAlinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+<meta property="og:site_name" content="zaoのblog">
+<meta property="og:description" content="链接➡ vscode + wsl + windows terminal 美化和搭建linux开发环境 没钱买mac,windwos下命令行挺难用的,之前一直用cmder还不错,但后期卡卡的,改用了windows terminal,真香啊,速度和外观都不错,刚好最近在学linux,一直用的阿里云做测试,想着统一一下包管理和命令行,发现了wsl这个东西,就打算改造一下windows,个人电脑系统为wi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.ax1x.com/2020/03/01/3gKDTf.jpg">
+<meta property="article:published_time" content="2020-03-11T03:23:23.000Z">
+<meta property="article:modified_time" content="2020-03-11T03:23:23.000Z">
+<meta property="article:author" content="zao">
+<meta property="article:tag" content="liunx">
+<meta property="article:tag" content="terminal">
+<meta property="article:tag" content="vscode">
+<meta property="article:tag" content="wsl">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.ax1x.com/2020/03/01/3gKDTf.jpg">
+
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"zao","description":"front end green-hand","image":"https://s2.ax1x.com/2020/03/01/3gKDTf.jpg"},"url":"https://www.hansomezao.com","image":"https://s2.ax1x.com/2020/03/01/3gKDTf.jpg","description":"zao个人博客,前端开发","author":{"@type":"Person","name":"zao","description":"front end green-hand","image":"https://s2.ax1x.com/2020/03/01/3gKDTf.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"articles","url":"https://www.hansomezao.com/2020/03/11/articles/vscode-wsl-windows-terminal%E7%BE%8E%E5%8C%96%E5%92%8C%E6%90%AD%E5%BB%BAlinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/","headline":"vscode+wsl+windows terminal美化和搭建linux开发环境","image":"https://s2.ax1x.com/2020/03/01/3gKDTf.jpg","datePublished":"2020-03-11T03:23:23.000Z","dateModified":"2020-03-11T03:23:23.000Z","keywords":"liunx,terminal,vscode,wsl","description":"zao个人博客,前端开发","publisher":{"@type":"Organization","name":"zaoのblog","logo":{"@type":"ImageObject","url":"https://s2.ax1x.com/2020/03/01/3gKDTf.jpg"}},"author":{"@type":"Person","name":"zao","description":"front end green-hand","image":"https://s2.ax1x.com/2020/03/01/3gKDTf.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.hansomezao.com/2020/03/11/articles/vscode-wsl-windows-terminal%E7%BE%8E%E5%8C%96%E5%92%8C%E6%90%AD%E5%BB%BAlinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"}}]</script>
+
+
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="/styles.d6ae91d5e735d1cc1e8c.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/theme.ab654316dcf6ff658de5.css">
+
+
+<script src="/config.e4a7216288933fdc60cb.js"></script>
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body lang="zh-Hans">
+<is-a></is-a>
+<script src="/runtime.1720a40670866f12654e.js"></script>
+<script src="/polyfills.69a7b8a907a7ac9da988.js"></script>
+<script src="/main.afaf3882c4354b8bfcf3.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ec6c9a67d27809161f45a392478f9996";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
